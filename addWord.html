@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Add word into dictionary </title>
+    <style type="text/css">
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    thead {
+      background: #ffffff;
+      color: #fff;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 5px;
+    }
+    tr:hover:nth-child(even) {
+      background-color: #EEEEEE;
+    }
+    body {
+      font-family: "Times New Roman", Times, serif;
+    }
+    a:visited {
+      color: blue;
+    }
+    a:hover {
+      color: green;
+    }
+
+
+
+    </style>
+</head>
+<body>
+
+<div style="text-align: right;"><a href="/"> HOME </a><br/></div>
+
+</br>
+
+<form action="/addWord" method="post">
+    <div >
+
+        <h2>Add new word to Dictionary</h2>
+
+        <label>Word :</label>
+        <input type="text" pattern="([A-Za-z]).{2,}" name="Word">
+        <p>Word should have minimum 3 letters </p>
+        <input type="submit" name="button" value="AddWord">
+        <p style="text-align:center">{{message}}</p>
+    </div>
+</form>
+
+</body>
+</html>

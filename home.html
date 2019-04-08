@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Anagram Login </title>
+
+    <style type="text/css">
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    thead {
+      background: #ffffff;
+      color: #fff;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 5px;
+    }
+    tr:hover:nth-child(even) {
+      background-color: #EEEEEE;
+    }
+    body {
+      font-family: "Times New Roman", Times, serif;
+    }
+    a:visited {
+      color: blue;
+    }
+    a:hover {
+      color: green;
+    }
+
+
+
+
+
+
+
+
+    </style>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+<div style="text-align: right;">Welome <b>{{user.email()}}</b> logout <a href="{{ logout_url }}">here</a><br></div>
+
+<h1 style="text-align:center;"> Welcome to the Anagaram application</h1>
+
+<p> Add words into the dictionary <a href="/addWord"> Add </a></p>
+
+<p> Upload words into the dictionary <a href="/uploadFile"> Upload </a></p>
+
+<p> Click for Sub Anagram <a href="/subAnagram"> Sub Anagram </a></p>
+
+        Total word count: {{ wc }}</br>
+        Anagram Count: {{ ac }}
+
+<form action="/" method="post" >
+    <div >
+
+
+    <label >Enter the word to Search :</label>
+    <input type="text" pattern="([A-Za-z]).{2,}" name="word"/><br/><br/>
+
+              <input type="submit" name="button" value="search">
+              <br/>
+</div>
+</form>
+
+<br/>
+{{message}}<br/>
+Key:{{ anagram.aKey }}
+
+<table>
+
+    <div style="text-align: center;"> Wordlist <br></div>
+
+  {% for x in anagram.wordList %}
+
+    <tr>
+        <td width="36%" ><b>Key: </b>{{ anagram.aKey }}</td>
+
+        <td width="64%" >{{ x }}</td>
+    </tr>
+
+  {% endfor %}
+</table>
+
+<div class="footer"></div>
+</body>
+
+</html>

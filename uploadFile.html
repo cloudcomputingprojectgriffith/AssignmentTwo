@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Upload </title>
+
+    <style type="text/css">
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    thead {
+      background: #ffffff;
+      color: #fff;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 5px;
+    }
+    tr:hover:nth-child(even) {
+      background-color: #EEEEEE;
+    }
+    body {
+      font-family: "Times New Roman", Times, serif;
+    }
+    a:visited {
+      color: blue;
+    }
+    a:hover {
+      color: green;
+    }
+
+    </style>
+</head>
+<body bgcolor="#FFFFFF">
+
+<div style="text-align: right;"> <a href="/">Home</a><br></div>
+
+<h1 style="text-align:center;"> Upload files here</h1>
+
+<form method="post">
+<div >
+    <input type="file" name="file"/>
+    <input type="submit" name="button" value="uploadFile">
+    {{ message }}
+</div>
+</form>
+</body>
+</html>

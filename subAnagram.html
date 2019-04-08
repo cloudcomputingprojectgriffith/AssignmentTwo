@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Anagram Login </title>
+
+    <style type="text/css">
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    thead {
+      background: #ffffff;
+      color: #fff;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 5px;
+    }
+    tr:hover:nth-child(even) {
+      background-color: #EEEEEE;
+    }
+    body {
+      font-family: "Times New Roman", Times, serif;
+    }
+    a:visited {
+      color: blue;
+    }
+    a:hover {
+      color: green;
+    }
+
+
+    </style>
+</head>
+
+<body>
+
+<div style="text-align: right;"> <a href="/">Home</a><br></div>
+
+<h1 style="text-align:center;"> Sub Anagaram</h1>
+
+</br>
+
+
+<form  action="/subAnagram" method="post">
+   <input type="text" name="word" size="25" pattern="([a-zA-Z]).{2,}"/>
+    <input type="submit" name="button" value="search"/>
+</form>
+
+
+  <table >
+
+    <th> Sub anagrams</th>
+    {% for i in subAnagram %}
+        <tr><td>{{ i }}</td></tr>
+    {% endfor %}
+  </table>
+
+  </body>
+</html>
